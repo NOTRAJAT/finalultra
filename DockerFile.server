@@ -1,0 +1,12 @@
+FROM ubuntu:24.04
+WORKDIR /base
+RUN  apt-get update -y
+RUN apt-get install wget -y
+RUN wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+RUN apt install nano -y
+RUN apt install make -y
+RUN apt install git -y
+RUN git clone https://github.com/NOTRAJAT/finalultra.git
+WORKDIR /base/finalultra
+RUN go mod download
+CMD [ "make" , "run" ]

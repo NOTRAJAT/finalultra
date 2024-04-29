@@ -1,0 +1,12 @@
+services:
+  server:
+    container_name: server-ultra-instances
+    image: server_ultrasonic
+    ports:
+      - 80:80
+      - "5432"
+  
+
+  
+
+    
